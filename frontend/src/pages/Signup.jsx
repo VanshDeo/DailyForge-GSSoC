@@ -61,7 +61,7 @@ const Signup = () => {
   const errorMessage =
     error.response?.data?.message || error.message || "Signup failed. Please try again.";
 
-  console.log(errorMessage);
+  console.log(`Error Message: ${errorMessage} with status code ${error.response.status}`);
 
   // specific handling for duplicate user
   if (error.response?.status === 409) {
